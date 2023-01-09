@@ -13,6 +13,11 @@
     background-color: #23856d;
     color: white;
     padding: 10px;
+    & a {
+      text-decoration: none;
+      color: #fff;
+    }
+
     & :first-child {
       & span {
         margin-right: 8px;
@@ -117,6 +122,7 @@
     display: flex;
     justify-content: center;
     margin: 28px 0;
+    padding: 0 8px;
     &__hr {
       width: 83%;
       margin-left: 92px;
@@ -233,6 +239,10 @@
     display: flex;
     justify-content: space-evenly;
     padding: 24px 0;
+    & a {
+      text-decoration: none;
+      color: #737373;
+    }
     &__subscribe {
       & input {
         height: 50px;
@@ -262,5 +272,138 @@
   .container {
     max-width: 1440px;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    overflow-x: hidden;
+  }
+  .header {
+    display: none;
+  }
+  .navbar {
+    &__container {
+      & div:first-child {
+        & h3 {
+          padding-left: 15px;
+          &::after {
+            content: url("./pics/menuiconformobile.svg");
+            float: right;
+            padding-right: 15px;
+          }
+        }
+      }
+      &:first-child,
+      a,
+      img {
+        display: block;
+      }
+      & div:nth-child(2) {
+        & a {
+          margin-right: 0;
+        }
+        & img {
+          display: none;
+        }
+      }
+      & a {
+        text-align: center;
+        line-height: 48px;
+      }
+      &__log {
+        display: flex;
+        justify-content: center;
+      }
+      & div:nth-child(4) {
+        display: grid;
+        justify-content: center;
+      }
+    }
+    &__container2 {
+      display: flex;
+      justify-content: center;
+      & a {
+        padding-left: 0;
+      }
+    }
+  }
+  .main {
+    &__container1 {
+      display: block;
+      & .carousel {
+        width: 100%;
+        padding: 12px 12px;
+      }
+      & .formobile {
+        padding: 40px;
+      }
+    }
+    &__container2 {
+      display: flex;
+      justify-content: space-between;
+      &__hr {
+        display: none;
+      }
+      & a {
+        margin-right: 0;
+      }
+    }
+    &__container3 {
+      display: grid;
+      padding: 0 36px;
+      & img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+    }
+    &__container4 {
+      &__grid {
+        display: block;
+        padding: 10px 40px;
+      }
+      & hr {
+        display: none;
+      }
+      & h3 {
+        padding: 16px;
+      }
+      & img {
+        max-width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+    &__container5 {
+      & img {
+        display: none;
+      }
+      &::after {
+        content: url("./pics/mobile-clients.svg");
+        margin-top: 0;
+        float: right;
+      }
+    }
+  }
+  .footer {
+    & hr {
+      display: none;
+    }
+    display: block;
+    &__container1 {
+      display: block;
+      padding: 12px 0 12px 32px;
+      &div:first-child {
+        display: flex;
+      }
+    }
+    &__container2 {
+      display: block;
+      &__subscribe {
+        display: block;
+        & li {
+          display: block;
+        }
+      }
+    }
   }
 }
